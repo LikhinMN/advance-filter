@@ -1,8 +1,10 @@
 import React from 'react'
-import './App.css'
+import Nav from './Navigation/Nav.jsx'
 const App = () => {
   return (
-    <div className='underlined bg-amber-50'>App</div>
+    <div>
+      <Nav />
+    </div>
   )
 }
 
