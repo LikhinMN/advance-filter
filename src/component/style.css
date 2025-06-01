@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+.brand-dark {
+  color: #171212;
+}
+.icon-bacground{
+  background-color: #F5F0F0;
+}
+.border-color{
+  border:#E5DBDB;
+}
+.brand-dark-light{
+  color: #876363;
+}
+.radio{
+  accent-color: #876363;
+}
+.filter:hover{
+  background-color: #f5f5f5;
+}
+.brand-dark-light::placeholder{
+  color:#876363;
+}
+.search-bar{
+  background-color: #F5F0F0;
+}

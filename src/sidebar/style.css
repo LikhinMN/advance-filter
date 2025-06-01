@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.brand-dark {
+  color: #171212;
+}
+.icon-bacground{
+  background-color: #F5F0F0;
+}
+.border-color{
+  border:#E5DBDB;
+}
+
+.mark{
+  color: #171212;
+}
+.mark:hover{
+  color: #876363;
+}
+.brand-dark-light-1{
+  background-color: #F5F0F0 ;
+}
+.brand-dark-light-1:hover{
+  color: #171212;
+  background-color: #876363;
+}

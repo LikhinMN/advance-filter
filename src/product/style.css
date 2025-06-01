@@ -6,6 +6,10 @@
 .icon-bacground{
   background-color: #F5F0F0;
 }
-.icon-bacground:hover{
-  background-color: #977272;
+.border-color{
+  border:#E5DBDB;
+}
+aside {
+  scrollbar-width: none;
+  scrollbar-color: #22c55e #f3f4f6;
 }
