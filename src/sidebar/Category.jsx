@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
 import Checkbox from '../component/Checkbox.jsx'
 
-const Category = ({ category }) => {
-  const [selected, setSelected] = useState(null);
-
+const Category = ({ category,setSelected }) => {
   return (
     <div className="mb-6">
       <h3 className="font-semibold text-lg mb-2 text-gray-700">Category</h3>
@@ -11,11 +8,9 @@ const Category = ({ category }) => {
         {category.map((item, index) => (
           <Checkbox
             key={index}
-            index={index}
+            setSelected={setSelected}
             item={item}
             name="category"
-            checked={selected === item}
-            onChange={setSelected}
           />
         ))}
       </ul>

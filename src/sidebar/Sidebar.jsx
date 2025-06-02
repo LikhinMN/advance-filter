@@ -7,7 +7,7 @@ import { FiFilter } from "react-icons/fi";
 import Data from '../../db/data.jsx'
 import "./style.css"
 
-const Sidebar = () => {
+const Sidebar = ({setSelected}) => {
   const [open, setOpen] = useState(false);
 
   const uniqueBrands = ["All brands", ...new Set(Data.map(item => item.company))];
@@ -21,7 +21,6 @@ const Sidebar = () => {
   ];
   return (
     <>
-      {/* Toggle Button - bottom right on mobile */}
       <button
         className="fixed bottom-6 right-6 z-30 md:hidden brand-dark text-white p-4 rounded-full shadow-lg focus:outline-none brand-dark-light-1 transition"
         onClick={() => setOpen(!open)}
@@ -43,7 +42,6 @@ const Sidebar = () => {
           <h2 className="text-2xl font-semibold flex items-center gap-2 brand-dark mb-2">
             <span>Filter</span>
           </h2>
-          {/* Close button for mobile */}
           <button
             className="md:hidden mark cursor-pointer text-2xl"
             onClick={() => setOpen(false)}
@@ -53,12 +51,11 @@ const Sidebar = () => {
           </button>
         </div>
         <hr className="mb-4 border-gray-200" />
-        <Brand brand={uniqueBrands} />
-        <Category category={uniqueCategories} />
-        <Price price={priceRanges}/>
-        <Color color={uniqueColors} />
+        <Brand brand={uniqueBrands} setSelected={setSelected}/>
+        <Category category={uniqueCategories} setSelected={setSelected}/>
+        <Price price={priceRanges} setSelected={setSelected}/>
+        <Color color={uniqueColors} setSelected={setSelected}/>
       </aside>
-      {/* Overlay for mobile */}
       {open && (
         <div
           className="fixed inset-0 z-10 md:hidden bg-black/30 backdrop-blur-sm"

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 .remove-scrollbar {
   overflow: auto;
-  scrollbar-width: none;      /* Firefox */
+  scrollbar-width: none;     
 }
 .remove-scrollbar::-webkit-scrollbar {
-  display: none;              /* Chrome, Safari, Opera */
+  display: none;             
 }

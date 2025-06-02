@@ -1,10 +1,9 @@
-import Data from "../../db/data";
 import React from 'react';
 import './style.css'
-const Card = () => {
+const Card = ({product}) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4">
-      {Data.map((item, index) => (
+      {product.map((item, index) => (
         <div
           key={index}
           className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-xl transition-shadow"

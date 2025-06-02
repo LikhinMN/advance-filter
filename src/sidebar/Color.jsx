@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
 import Checkbox from '../component/Checkbox.jsx'
 
-const Color = ({ color }) => {
-  const [selected, setSelected] = useState(null);
+const Color = ({ color,setSelected }) => {
 
   return (
     <div className="mb-6">
@@ -11,11 +9,9 @@ const Color = ({ color }) => {
         {color.map((item, index) => (
           <Checkbox
             key={index}
-            index={index}
+            setSelected={setSelected}
             item={item}
             name="color"
-            checked={selected === item}
-            onChange={setSelected}
           />
         ))}
       </ul>

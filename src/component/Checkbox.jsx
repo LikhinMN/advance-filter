@@ -1,21 +1,17 @@
-import React from "react";
 import './style.css'
-const Checkbox = ({ index, item, name, checked, onChange }) => {
+const Checkbox = ({ item, name,setSelected }) => {
   return (
     <li className="flex items-center space-x-2 p-1 rounded filter transition">
       <input
         type="radio"
-        id={`radio-${index}`}
+        id={`radio-${item}`}
         name={name}
-        checked={checked}
-        onChange={() => onChange(item)}
         className="radio w-4 h-4"
+        value={item}
+        onChange={(event)=>{if(event.target.checked){setSelected(event.target.value)}}}
       />
       <label
-        htmlFor={`radio-${index}`}
-        className={`cursor-pointer brand-dark-light select-none ${
-          checked ? "font-semibold brand-dark" : ""
-        }`}
+        htmlFor={`radio-${item}`}
       >
         {item}
       </label>
